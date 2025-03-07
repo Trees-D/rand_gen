@@ -81,8 +81,8 @@ pub extern "C" fn next_u64n(rng: *mut c_void, n: u32, out_values: *mut u64) {
             out_slice[i + 3] = rng.next();
             i += 4;
         }
-        for i in i..n {
-            out_slice[i] = rng.next();
+        for j in i..n {
+            out_slice[j] = rng.next();
         }
     }
 }
@@ -105,8 +105,8 @@ pub extern "C" fn next_u32n(rng: *mut c_void, n: u32, out_values: *mut u32) {
             out_slice[i + 3] = rng.next_u32();
             i += 4;
         }
-        for i in i..n {
-            out_slice[i] = rng.next_u32();
+        for j in i..n {
+            out_slice[j] = rng.next_u32();
         }
     }
 }
@@ -129,8 +129,8 @@ pub extern "C" fn next_f64n(rng: *mut c_void, n: u32, out_values: *mut f64) {
             out_slice[i + 3] = rng.next_f64();
             i += 4;
         }
-        for i in i..n {
-            out_slice[i] = rng.next_f64();
+        for j in i..n {
+            out_slice[j] = rng.next_f64();
         }
     }
 }
@@ -153,8 +153,8 @@ pub extern "C" fn next_f32n(rng: *mut c_void, n: u32, out_values: *mut f32) {
             out_slice[i + 3] = rng.next_f32();
             i += 4;
         }
-        for i in i..n {
-            out_slice[i] = rng.next_f32();
+        for j in i..n {
+            out_slice[j] = rng.next_f32();
         }
     }
 }
